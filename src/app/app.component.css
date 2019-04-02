@@ -1,3 +1,44 @@
-p {
-  font-family: Lato;
+mat-sidenav-container{
+  height: calc(100vh - 64px);
+}
+
+mat-sidenav{
+  width: 25%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+mat-toolbar{
+  z-index: 1000;
+  position: fixed;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.adjustable{
+  padding-top: 64px;
+  height: auto;
+  width: 100%;
+}
+
+.active{
+  background: rgba(0,0,0,0.1);
+}
+
+@media (max-width: 425px){
+  .adjustable{
+    padding-top: 54px;
+  }
+
+  mat-sidenav-container{
+    height: calc(100vh - 54px);
+  }
+  
+  mat-sidenav {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px){
+  mat-sidenav {
+    width: 15%;
+  }
 }

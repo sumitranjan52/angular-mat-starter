@@ -1,4 +1,35 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<mat-toolbar color='primary'>
+	<button mat-icon-button (click)='sidenavOpened = !sidenavOpened'>
+        <mat-icon *ngIf='!sidenavOpened'>menu</mat-icon>
+        <mat-icon *ngIf='sidenavOpened'>close</mat-icon>
+      </button>
+      <span>Angular Material Project</span>
+    </mat-toolbar>
+<div class='adjustable'>
+<mat-sidenav-container>
+  <mat-sidenav mode='side' [opened]='sidenavOpened'>
+    <mat-nav-list>
+      <mat-list-item routerLink='/' (click)='sidenavOpened = !sidenavOpened'>
+        <mat-icon matListIcon>home</mat-icon>
+        <span matLine>Home</span>
+      </mat-list-item>
+      <mat-list-item routerLink='/about' routerLinkActive='active' (click)='sidenavOpened = !sidenavOpened'>
+        <mat-icon matListIcon>domain</mat-icon>
+        <span matLine>About</span>
+      </mat-list-item>
+      <mat-list-item routerLink='/services' routerLinkActive='active' (click)='sidenavOpened = !sidenavOpened'>
+        <mat-icon matListIcon>commute</mat-icon>
+        <span matLine>Services</span>
+      </mat-list-item>
+      <mat-list-item routerLink='/contact' routerLinkActive='active' (click)='sidenavOpened = !sidenavOpened'>
+        <mat-icon matListIcon>message</mat-icon>
+        <span matLine>Contact</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>

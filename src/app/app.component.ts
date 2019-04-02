@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import {  } from '@angular/material';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular';
+  sidenavOpened:boolean = false;
 }
